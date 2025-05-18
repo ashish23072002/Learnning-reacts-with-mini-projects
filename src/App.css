@@ -9,3 +9,23 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+button {
+  padding: 10px 20px;
+  background-color: #313e32; /* Green */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #394b3a;
+}
+
+button:active {
+  background-color: #2d352d;
+}
+

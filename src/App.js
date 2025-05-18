@@ -1,10 +1,12 @@
-import { ReactUseEffect } from "./components/useEffects";
 import './App.css'; 
+import { ReactUseEffect } from "./components/useEffects";
+import { EventHandling } from "./components/eventHandling";
 
 function App() {
   return (
     <div className="App">
-    <ReactUseEffect/>
+    <EventHandling/>
+    {/* <ReactUseEffect/> */}
     </div>
     
   );
