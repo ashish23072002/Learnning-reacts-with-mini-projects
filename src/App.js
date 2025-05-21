@@ -3,8 +3,9 @@ import './App.css';
 // import { ReactUseEffect } from "./components/useEffects";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventProps } from './components/eventProps';
-import { State } from './components/hooks/useState/index';
-import { DerivedState } from './components/hooks/useState/derivedState';
+// import { State } from './components/hooks/useState/index';
+// import { DerivedState } from './components/hooks/useState/derivedState';
+import { ToggleSwitch } from './components/MiniProject/ToggleSwitch/ToggleSwitch';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
     {/* <EventHandling/> */}
     {/* <ReactUseEffect/> */}
     {/* <EventProps/> */}
-    <State/>
-    <DerivedState/>
+    {/* <State/>
+    <DerivedState/> */}
+    <ToggleSwitch/>
     </div>
     
   );
