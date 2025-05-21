@@ -9,7 +9,7 @@ export const State = () => {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-5 text-center">
         <h1 className="text-center">{count}</h1>
         <button onClick={handelButtonClick}>Increment</button>
       </div>
