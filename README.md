@@ -58,3 +58,5 @@ function Timer() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Timer />);
 ```
+
+This is the line from another computers
