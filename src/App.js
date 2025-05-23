@@ -5,7 +5,8 @@ import './App.css';
 // import { EventProps } from './components/eventProps';
 // import { State } from './components/hooks/useState/index';
 // import { DerivedState } from './components/hooks/useState/derivedState';
-import { ToggleSwitch } from './components/MiniProject/ToggleSwitch/ToggleSwitch';
+// import { ToggleSwitch } from './components/MiniProject/ToggleSwitch/ToggleSwitch';
+import { TodoProject } from './components/MiniProject/Todo/Todo';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
     {/* <EventProps/> */}
     {/* <State/>
     <DerivedState/> */}
-    <ToggleSwitch/>
+    {/* <ToggleSwitch/> */}
+    <TodoProject/>
     </div>
     
   );

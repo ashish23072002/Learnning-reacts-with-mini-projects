@@ -1,31 +1,5 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #353a40;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --primary-color: #000000;
 }
-
-button {
-  padding: 10px 20px;
-  background-color: #313e32; /* Green */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #394b3a;
-}
-
-button:active {
-  background-color: #2d352d;
-}
-
