@@ -59,4 +59,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Timer />);
 ```
 
-This is the line from another computers
+# Extensions i am currently using for Vs code
+
+- Path Intellisense : Christian Kohler
+- Path Autocomplete : Mihai Vilcu
+- Material Icon Theme : Philipp Kief
+- JS JSX Snippets : Nai You Ran
+- Auto Rename Tag : Jun Han
+- colorize : kamikillerto
+- ES7 React/Redux/GraphQL/React-Native snippets : rodrigovallades
+- Prettier - Code formatter
