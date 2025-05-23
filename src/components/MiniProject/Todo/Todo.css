@@ -123,9 +123,6 @@ span {
 
 .todo-item {
   margin: 2.4rem;
-  /*word-wrap: break-word;
-    */ /*flex-wrap: wrap;
-    */
   font-size: 20px;
   color: #1c2833;
   border-radius: 30px;
@@ -135,41 +132,53 @@ span {
   max-width: 40rem;
   padding: 1.6rem 3rem;
   display: grid;
-  grid-template-columns: 1fr 0.3fr 0.3fr;
-  justify-content: start;
+  grid-template-columns: 1fr auto auto;
   gap: 1.6rem;
-  /*align-items: center;
-    */ /*wrapsthelinks*/
   overflow-wrap: anywhere;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 10px;
 }
 
 li span {
   max-width: 20rem;
   color: #1c2833;
+  word-break: break-word;
 }
 
 .check-btn,
 .delete-btn {
-  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
   cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 80%;
-  margin: 0 5px;
-  background-color: #fff;
-  color: rgb(0, 0, 0);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
 }
 
 .check-btn {
-  color: #fff;
   background-color: #2ecc71;
 }
 
+.check-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.5);
+}
+
 .delete-btn {
-  color: #fff;
   background-color: #e74c3c;
 }
+
+.delete-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.5);
+}
+
 
 .checkList {
   text-decoration: line-through;

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Todo.css";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { IoCheckmarkCircle } from "react-icons/io5";
 
 export const TodoProject = () => {
   const [inputValue, setInputValue] = useState("");
@@ -46,9 +48,14 @@ export const TodoProject = () => {
         </section>
         <section>
             <ul>
-                task.map((curTask, index)=>{
-                    return<li key={index}></li>
+                {task.map((curTask,index)=>{
+                  return <li key={index} className="todo-item">
+                    <span>{curTask}</span>
+                    <button className="check-btn"><IoCheckmarkCircle/></button>
+                    <button className="delete-btn"><RiDeleteBin5Fill/></button>
+                  </li>
                 })
+                }
             </ul>
         </section>
       </section>
