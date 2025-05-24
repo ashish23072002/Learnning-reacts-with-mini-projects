@@ -36,6 +36,16 @@ export const TodoProject = () => {
     setTask((prev) => [...prev, inputValue]); //Spread Operator(...)
     setInputValue("");
   };
+
+
+  const handleDeleteTodo= (value)=>{
+    setTask((prevTasks) => prevTasks.filter((curTask) => curTask !== value));
+    // console.log(value);
+  }
+
+  const clearAllTo =()=>{
+    setTask([]);
+  }
   return (
     <>
       <section className="todo-container">
@@ -69,14 +79,15 @@ export const TodoProject = () => {
                   return <li key={index} className="todo-item">
                     <span>{curTask}</span>
                     <button className="check-btn"><IoCheckmarkCircle/></button>
-                    <button className="delete-btn"><RiDeleteBin5Fill/></button>
+                    <button className="delete-btn" onClick={()=>handleDeleteTodo(curTask)}>
+                      <RiDeleteBin5Fill/></button>
                   </li>
                 })
                 }
             </ul>
         </section>
         <section>
-          <button className="clear-btn">Clear all</button>
+          <button onClick={clearAllTo} className="clear-btn">Clear all</button>
         </section>
       </section>
     </>
