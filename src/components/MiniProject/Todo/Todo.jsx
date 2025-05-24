@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Todo.css";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { IoCheckmarkCircle } from "react-icons/io5";
@@ -6,6 +6,20 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 export const TodoProject = () => {
   const [inputValue, setInputValue] = useState("");
   const [task, setTask] = useState([]);
+  const [dateTime, setDateTime] = useState();
+
+
+  useEffect(()=>{
+    const intearval =setInterval(()=>{
+      const now= new Date();
+      const formattedDate=now.toLocaleDateString();
+      const formattedTime=now.toLocaleTimeString()
+  
+      setDateTime(`${formattedDate} - ${formattedTime}`);
+  
+    },1000)
+    return () =>  clearInterval(intearval)
+  },[])
 
   const handleInputChange = (value) => {
     setInputValue(value);
@@ -19,7 +33,7 @@ export const TodoProject = () => {
       return;
     } // condetion to chek weater the value existed on the array
 
-    setTask((prev) => [...prev, inputValue]); //Spread Operator
+    setTask((prev) => [...prev, inputValue]); //Spread Operator(...)
     setInputValue("");
   };
   return (
@@ -28,6 +42,9 @@ export const TodoProject = () => {
         <header>
           <h1>To-Do list</h1>
         </header>
+        <section className="date-time">
+          {dateTime}
+        </section>
         <section className="form">
           <form onSubmit={handleFormSubmit}>
             <div>
@@ -57,6 +74,9 @@ export const TodoProject = () => {
                 })
                 }
             </ul>
+        </section>
+        <section>
+          <button className="clear-btn">Clear all</button>
         </section>
       </section>
     </>
