@@ -59,6 +59,62 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Timer />);
 ```
 
+
+
+# 📘 React Notes: Passing Data from Parent to Child Component
+
+In React, **data is passed from a parent component to a child component using props**. This is the most common way for components to communicate.
+
+---
+
+## ✅ Basic Concept
+
+- **Props** (short for "properties") are used to send data.
+- The child component receives props as a parameter.
+- Props are **read-only** in the child component.
+
+---
+
+## 🔨 Example
+
+### 1. Parent Component
+
+```jsx
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+function ParentComponent() {
+  const message = "Hello from Parent!";
+  const user = { name: 'Alice', age: 25 };
+
+  return (
+    <div>
+      <h1>Parent Component</h1>
+      <ChildComponent message={message} user={user} />
+    </div>
+  );
+}
+
+export default ParentComponent;
+```
+```
+import React from 'react';
+
+function ChildComponent({ message, user }) {
+  return (
+    <div>
+      <h2>Child Component</h2>
+      <p>{message}</p>
+      <p>User: {user.name}, Age: {user.age}</p>
+    </div>
+  );
+}
+
+export default ChildComponent;
+
+```
+
+
 # Extensions i am currently using for Vs code
 
 - Path Intellisense : Christian Kohler
