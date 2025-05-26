@@ -1,4 +1,4 @@
-import {useState } from "react";
+import { useEffect, useState } from "react";
 import "./Todo.css";
 import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
@@ -8,16 +8,21 @@ export const TodoProject = () => {
   const [task, setTask] = useState([]);
 
   const handleFormSubmit = (inputValue) => {
-    if (!inputValue) return; // not store the emply value from the input
-    if (task.includes(inputValue)) {
-      return;
-    } // condetion to chek weater the value existed on the array
+    const { id, content, checked } = inputValue;
+    if (!content) return; // to chek input filed is empty or not
+    // if (task.includes(inputValue)) return; // condetion to chek weater the value existed on the array
 
-    setTask((prev) => [...prev, inputValue]); //Spread Operator(...)
+    const ifToDoMatched = task.find((curTask) => curTask.content === content);
+    if (ifToDoMatched) return;
+
+    setTask((prev) => [...prev, {id, content,checked}]); //Spread Operator(...)
   };
 
+  useEffect(() => {
+  console.log(task);
+}, [task]);
   const handleDeleteTodo = (value) => {
-    setTask((prevTasks) => prevTasks.filter((curTask) => curTask !== value));
+    setTask((prevTasks) => prevTasks.filter((curTask) => curTask.content !== value));
     // console.log(value);
   };
 
@@ -36,11 +41,11 @@ export const TodoProject = () => {
         <TodoForm onAddTodo={handleFormSubmit} />
         <section>
           <ul>
-            {task.map((curTask, index) => {
+            {task.map((curTask) => {
               return (
                 <TodoList
-                  key={index}
-                  data={curTask}
+                  key={curTask.id}
+                  data={curTask.content}
                   onHandleTodo={handleDeleteTodo}
                 />
               );

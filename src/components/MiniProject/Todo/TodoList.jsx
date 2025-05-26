@@ -1,10 +1,10 @@
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 
-export const TodoList = ({key,data,onHandleTodo}) => {
+export const TodoList = ({data,onHandleTodo}) => {
   return (
     <>
-      <li key={key} className="todo-item">
+      <li className="todo-item">
         <span>{data}</span>
         <button className="check-btn">
           <IoCheckmarkCircle />
