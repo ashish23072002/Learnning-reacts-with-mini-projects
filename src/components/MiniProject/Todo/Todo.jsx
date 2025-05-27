@@ -15,20 +15,35 @@ export const TodoProject = () => {
     const ifToDoMatched = task.find((curTask) => curTask.content === content);
     if (ifToDoMatched) return;
 
-    setTask((prev) => [...prev, {id, content,checked}]); //Spread Operator(...)
+    setTask((prev) => [...prev, { id, content, checked }]); //Spread Operator(...)
   };
 
+
+  const handleCheckedTodo = (content)=>{
+    const updateTask =task.map((curTask)=>{
+      if(curTask.content === content){
+        return {...curTask,checked:!curTask.checked}
+      }
+      else{
+        return curTask;
+      }
+    })
+    setTask(updateTask);
+  }
   useEffect(() => {
-  console.log(task);
-}, [task]);
+    console.log(task);
+  }, [task]);
   const handleDeleteTodo = (value) => {
-    setTask((prevTasks) => prevTasks.filter((curTask) => curTask.content !== value));
+    setTask((prevTasks) =>
+      prevTasks.filter((curTask) => curTask.content !== value)
+    );
     // console.log(value);
   };
 
   const clearAllTo = () => {
     setTask([]);
   };
+
   return (
     <>
       <section className="todo-container">
@@ -46,7 +61,9 @@ export const TodoProject = () => {
                 <TodoList
                   key={curTask.id}
                   data={curTask.content}
+                  checked={curTask.checked}
                   onHandleTodo={handleDeleteTodo}
+                  onHandleCheckedTodo={handleCheckedTodo}
                 />
               );
             })}
