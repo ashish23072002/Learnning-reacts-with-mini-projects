@@ -5,7 +5,11 @@ import { TodoList } from "./TodoList";
 import { ToDoDate } from "./ToDoDate";
 
 export const TodoProject = () => {
-  const [task, setTask] = useState([]);
+  const [task, setTask] = useState(() => {
+    const rawTodos = localStorage.getItem("reactToDo");
+    if (!rawTodos) return [];
+    return JSON.parse(rawTodos);
+  });
 
   const handleFormSubmit = (inputValue) => {
     const { id, content, checked } = inputValue;
@@ -18,18 +22,16 @@ export const TodoProject = () => {
     setTask((prev) => [...prev, { id, content, checked }]); //Spread Operator(...)
   };
 
-
-  const handleCheckedTodo = (content)=>{
-    const updateTask =task.map((curTask)=>{
-      if(curTask.content === content){
-        return {...curTask,checked:!curTask.checked}
-      }
-      else{
+  const handleCheckedTodo = (content) => {
+    const updateTask = task.map((curTask) => {
+      if (curTask.content === content) {
+        return { ...curTask, checked: !curTask.checked };
+      } else {
         return curTask;
       }
-    })
+    });
     setTask(updateTask);
-  }
+  };
   useEffect(() => {
     console.log(task);
   }, [task]);
@@ -44,6 +46,7 @@ export const TodoProject = () => {
     setTask([]);
   };
 
+  localStorage.setItem("reactToDo", JSON.stringify(task));
   return (
     <>
       <section className="todo-container">
