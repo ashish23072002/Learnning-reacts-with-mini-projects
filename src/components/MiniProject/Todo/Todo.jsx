@@ -3,13 +3,11 @@ import "./Todo.css";
 import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
 import { ToDoDate } from "./ToDoDate";
+import { getLocalStorageData,setLocalStorageData } from "./TodoLocalStorage";
+
 
 export const TodoProject = () => {
-  const [task, setTask] = useState(() => {
-    const rawTodos = localStorage.getItem("reactToDo");
-    if (!rawTodos) return [];
-    return JSON.parse(rawTodos);
-  });
+  const [task, setTask] = useState(() => getLocalStorageData());
 
   const handleFormSubmit = (inputValue) => {
     const { id, content, checked } = inputValue;
@@ -46,7 +44,10 @@ export const TodoProject = () => {
     setTask([]);
   };
 
-  localStorage.setItem("reactToDo", JSON.stringify(task));
+  useEffect(() => {
+  setLocalStorageData(task);
+}, [task]);
+
   return (
     <>
       <section className="todo-container">
