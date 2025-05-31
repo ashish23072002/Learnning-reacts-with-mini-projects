@@ -7,7 +7,8 @@ import './App.css';
 // import { DerivedState } from './components/hooks/useState/derivedState';
 // import { ToggleSwitch } from './components/MiniProject/ToggleSwitch/ToggleSwitch';
 // import { ToggleSwitchPractice } from './components/MiniProject/ToggleSwitch/index';
-import { TodoProject } from './components/MiniProject/Todo/Todo';
+// import { TodoProject } from './components/MiniProject/Todo/Todo';
+import CounterChallenge from './components/hooks/useState/Challange';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
     <DerivedState/> */}
     {/* <ToggleSwitch/> */}
     {/* <ToggleSwitchPractice/> */}
-    <TodoProject/>
+    {/* <TodoProject/> */}
+    <CounterChallenge/>
     </div>
     
   );
