@@ -8,7 +8,8 @@ import './App.css';
 // import { ToggleSwitch } from './components/MiniProject/ToggleSwitch/ToggleSwitch';
 // import { ToggleSwitchPractice } from './components/MiniProject/ToggleSwitch/index';
 // import { TodoProject } from './components/MiniProject/Todo/Todo';
-import CounterChallenge from './components/hooks/useState/Challange';
+// import CounterChallenge from './components/hooks/useState/Challange';
+import { RegistrationForm } from './components/hooks/useState/Registration';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
     {/* <ToggleSwitch/> */}
     {/* <ToggleSwitchPractice/> */}
     {/* <TodoProject/> */}
-    <CounterChallenge/>
+    {/* <CounterChallenge/> */}
+    <RegistrationForm/>
     </div>
     
   );
