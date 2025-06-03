@@ -10,7 +10,8 @@ import './App.css';
 // import { TodoProject } from './components/MiniProject/Todo/Todo';
 // import CounterChallenge from './components/hooks/useState/Challange';
 // import { RegistrationForm } from './components/hooks/useState/Registration';
-import { RegistrationFormReact } from './components/hooks/useState/RegistrationReact';
+// import { RegistrationFormReact } from './components/hooks/useState/RegistrationReact';
+import { EffectChallenge } from './components/hooks/useEffects/EffeectChallange';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
     {/* <TodoProject/> */}
     {/* <CounterChallenge/> */}
     {/* <RegistrationForm/> */}
-    <RegistrationFormReact/>
+    {/* <RegistrationFormReact/> */}
+    <EffectChallenge/>
     </div>
     
   );
