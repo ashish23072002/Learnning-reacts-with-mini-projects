@@ -11,7 +11,8 @@ import './App.css';
 // import CounterChallenge from './components/hooks/useState/Challange';
 // import { RegistrationForm } from './components/hooks/useState/Registration';
 // import { RegistrationFormReact } from './components/hooks/useState/RegistrationReact';
-import { EffectChallenge } from './components/hooks/useEffects/EffeectChallange';
+// import { EffectChallenge } from './components/hooks/useEffects/EffeectChallange';
+import { CleanUp } from './components/hooks/useEffects/CleanUp';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
     {/* <CounterChallenge/> */}
     {/* <RegistrationForm/> */}
     {/* <RegistrationFormReact/> */}
-    <EffectChallenge/>
+    {/* <EffectChallenge/> */}
+    <CleanUp/>
     </div>
     
   );
