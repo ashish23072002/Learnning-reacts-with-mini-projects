@@ -12,7 +12,8 @@ import './App.css';
 // import { RegistrationForm } from './components/hooks/useState/Registration';
 // import { RegistrationFormReact } from './components/hooks/useState/RegistrationReact';
 // import { EffectChallenge } from './components/hooks/useEffects/EffeectChallange';
-import { CleanUp } from './components/hooks/useEffects/CleanUp';
+// import { CleanUp } from './components/hooks/useEffects/CleanUp';
+import { NotToFeatch } from './components/hooks/useEffects/HowNotToFeatchApi';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
     {/* <RegistrationForm/> */}
     {/* <RegistrationFormReact/> */}
     {/* <EffectChallenge/> */}
-    <CleanUp/>
+    {/* <CleanUp/> */}
+    <NotToFeatch/>
     </div>
     
   );
