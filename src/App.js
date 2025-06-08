@@ -14,6 +14,7 @@ import './App.css';
 // import { EffectChallenge } from './components/hooks/useEffects/EffeectChallange';
 // import { CleanUp } from './components/hooks/useEffects/CleanUp';
 import { NotToFeatch } from './components/hooks/useEffects/HowNotToFeatchApi';
+import { FeatchApi } from './components/hooks/useEffects/FeatchApi';
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
     {/* <RegistrationFormReact/> */}
     {/* <EffectChallenge/> */}
     {/* <CleanUp/> */}
-    <NotToFeatch/>
+    {/* <NotToFeatch/> */}
+    <FeatchApi/>
     </div>
     
   );
