@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
-import "./Pokemon.css"
+import "./Pokemon.css";
 
 export const FeatchApi = () => {
-  const API = "https://pokeapi.co/api/v2/pokemon/squirtle";
+  const API = "https://pokeapi.co/api/v2/pokemon/charmeleon";
   const [pokemon, setPokemon] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const featchPokemon = () => {
     fetch(API)
       .then((res) => res.json())
       .then((data) => {
         setPokemon(data);
+        setLoading(false);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
@@ -20,7 +25,14 @@ export const FeatchApi = () => {
 
   console.log(pokemon);
 
-  if (pokemon) {
+    if (loading)
+    return (
+      <div>
+        <h1>Loading....</h1>
+      </div>
+    );
+
+  // if (pokemon) {
     return (
       <section className="container">
         <header>
@@ -51,5 +63,5 @@ export const FeatchApi = () => {
         </ul>
       </section>
     );
-  }
+  // }
 };
