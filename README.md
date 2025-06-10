@@ -189,6 +189,50 @@ function ChildComponent({ message, user }) {
 export default ChildComponent;
 
 ```
+# 📘 JavaScript: `fetch`, `async`, and `await`
+
+This document provides a beginner-friendly explanation of how `fetch`, `async`, and `await` work in JavaScript, including how to use them, why they're important, and the difference between them.
+
+---
+
+## 🔹 What is `fetch()`?
+
+- `fetch()` is a built-in JavaScript function used to **make HTTP requests** (like GET, POST).
+- It returns a **Promise** that resolves to a `Response` object.
+- Commonly used to call APIs and retrieve or send data from/to a server.
+
+### ✅ Basic Example:
+
+```js
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+
+### ✅ `async`
+- The `async` keyword is used to **declare a function** that **returns a Promise**.
+- It **allows the use of `await`** inside that function.
+
+### ✅ `await`
+- The `await` keyword is used **inside an `async` function**.
+- It **pauses the function execution** until the awaited Promise is resolved.
+- It makes asynchronous code look more like **synchronous code**, which **improves readability** and simplifies logic flow.
+
+
+
+```js
+async function getData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+```
+
 
 
 # Extensions i am currently using for Vs code

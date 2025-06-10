@@ -7,6 +7,23 @@ export const FeatchApi = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+//using fetch Api
+  //   const fetchPokemon = () => {  
+  //     fetch(API)
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setPokemon(data);
+  //         setLoading(false);
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //         setError(error);
+  //         setLoading(false);
+  //       });
+  //   };
+
+
+// using async await
   const fetchPokemon = async () => {
     try {
       const res = await fetch(API);
