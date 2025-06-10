@@ -218,9 +218,6 @@ fetch('https://api.example.com/data')
 - The `await` keyword is used **inside an `async` function**.
 - It **pauses the function execution** until the awaited Promise is resolved.
 - It makes asynchronous code look more like **synchronous code**, which **improves readability** and simplifies logic flow.
-
-
-
 ```js
 async function getData() {
   try {
