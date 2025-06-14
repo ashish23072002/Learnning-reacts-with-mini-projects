@@ -231,6 +231,16 @@ async function getData() {
 ```
 
 
+### how to install json db server 
+
+ npm install -g json-server
+ {
+  "users": []
+}
+
+ json-server --watch db.json --port 3001
+
+
 
 # Extensions i am currently using for Vs code
 
@@ -242,3 +252,6 @@ async function getData() {
 - colorize : kamikillerto
 - ES7 React/Redux/GraphQL/React-Native snippets : rodrigovallades
 - Prettier - Code formatter
+
+
+

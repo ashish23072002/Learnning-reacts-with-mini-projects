@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; 
+import { Pracform } from './components/PracticeForm';
 // import { ReactUseEffect } from "./components/hooks/useEffects/";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventProps } from './components/eventProps';
@@ -13,8 +14,9 @@ import './App.css';
 // import { RegistrationFormReact } from './components/hooks/useState/RegistrationReact';
 // import { EffectChallenge } from './components/hooks/useEffects/EffeectChallange';
 // import { CleanUp } from './components/hooks/useEffects/CleanUp';
-import { NotToFeatch } from './components/hooks/useEffects/HowNotToFeatchApi';
-import { FeatchApi } from './components/hooks/useEffects/FeatchApi';
+// import { NotToFeatch } from './components/hooks/useEffects/HowNotToFeatchApi';
+// import { FeatchApi } from './components/hooks/useEffects/FeatchApi';
+
 
 function App() {
   return (
@@ -33,7 +35,8 @@ function App() {
     {/* <EffectChallenge/> */}
     {/* <CleanUp/> */}
     {/* <NotToFeatch/> */}
-    <FeatchApi/>
+    {/* <FeatchApi/> */}
+    <Pracform/>
     </div>
     
   );
