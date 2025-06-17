@@ -18,6 +18,7 @@ export const Pracform= () =>{
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (!formData.name || ! formData.email) return;
     fetch("http://localhost:3001/users", {
       method: "POST",
       headers: {
