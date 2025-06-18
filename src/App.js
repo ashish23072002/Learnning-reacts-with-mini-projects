@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; 
-import { Pracform } from './components/PracticeForm';
+// import { Pracform } from './components/PracticeForm';
+import { PracticesessionII } from './components/PracticeFormII';
 // import { ReactUseEffect } from "./components/hooks/useEffects/";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventProps } from './components/eventProps';
@@ -36,7 +37,8 @@ function App() {
     {/* <CleanUp/> */}
     {/* <NotToFeatch/> */}
     {/* <FeatchApi/> */}
-    <Pracform/>
+    {/* <Pracform/> */}
+    <PracticesessionII/>
     </div>
     
   );
