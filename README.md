@@ -112,7 +112,7 @@ The `useEffect` hook allows you to perform side effects in your components, such
 
 This example uses `setTimeout()` to increment a counter 1 second after the initial render.
 
-## 📦 Code Example
+## 📦 Code Example js
 
 
 ```js
