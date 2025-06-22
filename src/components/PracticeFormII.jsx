@@ -1,35 +1,62 @@
 import { useState } from "react";
 
 export const PracticesessionII = () => {
-  const [input, setInput] = useState("");
-  const [values, setValues] = useState([]); // State to store an array of values
-
-  const handleChange = (event) => {
-    setInput(event.target.value);
+  const [input, setInput] = useState({ user: "", email: "" });
+  const [val, setVal] = useState([]);
+  const formSubmit = (e) => {
+    e.preventDefault();
+    setVal([...val, input]);
+    setInput({ user: "", email: "" });
   };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(values);
-    if (input.trim()) {
-      // Check if the input is not empty
-      setValues([...values, input]); // Add the new input value to the array
-      setInput(""); // Clear the input field after submission
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInput((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
     <>
-      <form onClick={handleSubmit}>
-        <label></label>
-        <input type="text" value={input} onChange={handleChange} />
-        <button type="submit">submit</button>
+      <form>
+        <input
+          type="text"
+          name="user"
+          value={input.user}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="email"
+          value={input.email}
+          onChange={handleChange}
+        />
+
+        <button type="submit" onClick={formSubmit}>
+          Submit
+        </button>
       </form>
-      <ul>{values.map((value,index)=>(
-        <li key={index}>
-            {value}
-        </li>
-      ))}</ul>
+      {input.user + " " + input.email}
+      <div>
+        {val.map((item, index) => (
+          <div
+            key={index}
+            style={{
+              border: "1px solid #ccc",
+              margin: "5px",
+              padding: "10px",
+              borderRadius: "5px",
+            }}
+          >
+            <p>
+              <strong>User:</strong> {item.user}
+            </p>
+            <p>
+              <strong>Email:</strong> {item.email}
+            </p>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
