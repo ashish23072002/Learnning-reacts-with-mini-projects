@@ -2,7 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; 
 // import { Pracform } from './components/PracticeForm';
 // import { PracticesessionII } from './components/PracticeFormII';
-import { ExpenseSplitter } from './components/ExpenseSplitter';
+// import { ExpenseSplitter } from './components/ExpenseSplitter';
+import { UseRef } from './components/hooks/useRef';
 // import { ReactUseEffect } from "./components/hooks/useEffects/";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventProps } from './components/eventProps';
@@ -40,7 +41,8 @@ function App() {
     {/* <FeatchApi/> */}
     {/* <Pracform/> */}
     {/* <PracticesessionII/> */}
-    <ExpenseSplitter/>
+    {/* <ExpenseSplitter/> */}
+    <UseRef/>
     </div>
     
   );

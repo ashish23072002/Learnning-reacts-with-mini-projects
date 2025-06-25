@@ -10,7 +10,7 @@ export const ExpenseSplitter = () => {
       [name]: value,
     }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
     if (formatdata.name === "") return;
     e.preventDefault();
     setEntries((prev) => [
