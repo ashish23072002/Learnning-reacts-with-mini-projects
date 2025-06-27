@@ -3,7 +3,8 @@ import './App.css';
 // import { Pracform } from './components/PracticeForm';
 // import { PracticesessionII } from './components/PracticeFormII';
 // import { ExpenseSplitter } from './components/ExpenseSplitter';
-import { UseRef } from './components/hooks/useRef';
+// import { UseRef } from './components/hooks/useRef';
+import { ForwardRef } from './components/hooks/useRef/ForwardRef';
 // import { ReactUseEffect } from "./components/hooks/useEffects/";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventProps } from './components/eventProps';
@@ -42,7 +43,8 @@ function App() {
     {/* <Pracform/> */}
     {/* <PracticesessionII/> */}
     {/* <ExpenseSplitter/> */}
-    <UseRef/>
+    {/* <UseRef/> */}
+    <ForwardRef/>
     </div>
     
   );
