@@ -1,6 +1,6 @@
 import { useId, useRef } from "react";
 import "./index.css";
-import { forwardRef } from "react";
+// import { forwardRef } from "react";
 export const ForwardRef = () => {
   const username = useRef(null);
   const password = useRef(null);
@@ -21,13 +21,28 @@ export const ForwardRef = () => {
     </>
   );
 };
+
+// BeforeReact19
 // i need to create BeforeReact19Input component
-const BeforeReact19Input = forwardRef((props, ref) => {
+// const BeforeReact19Input = forwardRef((props, ref) => {
+//   const id = useId();
+//   return (
+//     <>
+//       <label htmlFor={id}>{props.label}</label>
+//       <input type="text" ref={ref} />
+//     </>
+//   );
+// });
+
+// AfterReact19
+// i need to create AfterReact19Input component
+const BeforeReact19Input = (props) => {
   const id = useId();
   return (
     <>
       <label htmlFor={id}>{props.label}</label>
-      <input type="text" ref={ref} />
+      <input type="text" ref={props.ref} />
     </>
   );
-});
+};
+
