@@ -5,6 +5,7 @@ import './App.css';
 // import { ExpenseSplitter } from './components/ExpenseSplitter';
 // import { UseRef } from './components/hooks/useRef';
 import { ForwardRef } from './components/hooks/useRef/ForwardRef';
+import { UseID } from './components/hooks/UseId';
 // import { ReactUseEffect } from "./components/hooks/useEffects/";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventProps } from './components/eventProps';
@@ -44,7 +45,8 @@ function App() {
     {/* <PracticesessionII/> */}
     {/* <ExpenseSplitter/> */}
     {/* <UseRef/> */}
-    <ForwardRef/>
+    {/* <ForwardRef/> */}
+    <UseID/>
     </div>
     
   );
