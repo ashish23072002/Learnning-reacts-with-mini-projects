@@ -1,11 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; 
+import { BioProvider } from './components/hooks/ContexAPI';
+import { Home } from './components/hooks/ContexAPI/Home';
+import { About } from './components/hooks/ContexAPI/About';
 // import { Pracform } from './components/PracticeForm';
 // import { PracticesessionII } from './components/PracticeFormII';
 // import { ExpenseSplitter } from './components/ExpenseSplitter';
 // import { UseRef } from './components/hooks/useRef';
-import { ForwardRef } from './components/hooks/useRef/ForwardRef';
-import { UseID } from './components/hooks/UseId';
+// import { ForwardRef } from './components/hooks/useRef/ForwardRef';
+// import { UseID } from './components/hooks/UseId';
 // import { ReactUseEffect } from "./components/hooks/useEffects/";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventProps } from './components/eventProps';
@@ -25,6 +28,7 @@ import { UseID } from './components/hooks/UseId';
 
 function App() {
   return (
+    <BioProvider>
     <div className="App">
     {/* <EventHandling/> */}
     {/* <ReactUseEffect/> */}
@@ -46,8 +50,11 @@ function App() {
     {/* <ExpenseSplitter/> */}
     {/* <UseRef/> */}
     {/* <ForwardRef/> */}
-    <UseID/>
+    {/* <UseID/> */}
+    <Home/>
+    <About/>
     </div>
+    </BioProvider>
     
   );
 }
