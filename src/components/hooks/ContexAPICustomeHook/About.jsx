@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { BioContex } from ".";
 
 export const About = () => {
+  // without useiong custome Hoooks
   const { name, age } = useContext(BioContex);
 
   return (
