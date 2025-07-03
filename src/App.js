@@ -1,8 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'; 
-import { BioProvider } from './components/hooks/ContexAPI';
-import { Home } from './components/hooks/ContexAPI/Home';
-import { About } from './components/hooks/ContexAPI/About';
+import { BioProvider } from './components/hooks/ContexAPICustomeHook';
+import { ReducerComp } from './components/hooks/UseReducer';
+// import { Home } from './components/hooks/ContexAPICustomeHook/Home';
+// import { About } from './components/hooks/ContexAPICustomeHook/About';
 // import { Pracform } from './components/PracticeForm';
 // import { PracticesessionII } from './components/PracticeFormII';
 // import { ExpenseSplitter } from './components/ExpenseSplitter';
@@ -51,8 +52,9 @@ function App() {
     {/* <UseRef/> */}
     {/* <ForwardRef/> */}
     {/* <UseID/> */}
-    <Home/>
-    <About/>
+    {/* <Home/>
+    <About/> */}
+    <ReducerComp/>
     </div>
     </BioProvider>
     
