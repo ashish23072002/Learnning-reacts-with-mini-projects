@@ -1,7 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'; 
-import { BioProvider } from './components/hooks/ContexAPICustomeHook';
-import { ReducerComp } from './components/hooks/UseReducer';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { BioProvider } from "./components/hooks/ContexAPICustomeHook";
+// import { ReducerComp } from "./components/hooks/UseReducer";
+import { DarkLight, TheamProvider } from "./components/hooks/ContexAPICustomeHook/DarkLite";
 // import { Home } from './components/hooks/ContexAPICustomeHook/Home';
 // import { About } from './components/hooks/ContexAPICustomeHook/About';
 // import { Pracform } from './components/PracticeForm';
@@ -26,38 +27,39 @@ import { ReducerComp } from './components/hooks/UseReducer';
 // import { NotToFeatch } from './components/hooks/useEffects/HowNotToFeatchApi';
 // import { FeatchApi } from './components/hooks/useEffects/FeatchApi';
 
-
 function App() {
   return (
     <BioProvider>
-    <div className="App">
-    {/* <EventHandling/> */}
-    {/* <ReactUseEffect/> */}
-    {/* <EventProps/> */}
-    {/* <State/>
+      <TheamProvider>
+        <div className="App">
+          {/* <EventHandling/> */}
+          {/* <ReactUseEffect/> */}
+          {/* <EventProps/> */}
+          {/* <State/>
     <DerivedState/> */}
-    {/* <ToggleSwitch/> */}
-    {/* <ToggleSwitchPractice/> */}
-    {/* <TodoProject/> */}
-    {/* <CounterChallenge/> */}
-    {/* <RegistrationForm/> */}
-    {/* <RegistrationFormReact/> */}
-    {/* <EffectChallenge/> */}
-    {/* <CleanUp/> */}
-    {/* <NotToFeatch/> */}
-    {/* <FeatchApi/> */}
-    {/* <Pracform/> */}
-    {/* <PracticesessionII/> */}
-    {/* <ExpenseSplitter/> */}
-    {/* <UseRef/> */}
-    {/* <ForwardRef/> */}
-    {/* <UseID/> */}
-    {/* <Home/>
+          {/* <ToggleSwitch/> */}
+          {/* <ToggleSwitchPractice/> */}
+          {/* <TodoProject/> */}
+          {/* <CounterChallenge/> */}
+          {/* <RegistrationForm/> */}
+          {/* <RegistrationFormReact/> */}
+          {/* <EffectChallenge/> */}
+          {/* <CleanUp/> */}
+          {/* <NotToFeatch/> */}
+          {/* <FeatchApi/> */}
+          {/* <Pracform/> */}
+          {/* <PracticesessionII/> */}
+          {/* <ExpenseSplitter/> */}
+          {/* <UseRef/> */}
+          {/* <ForwardRef/> */}
+          {/* <UseID/> */}
+          {/* <Home/>
     <About/> */}
-    <ReducerComp/>
-    </div>
+          {/* <ReducerComp /> */}
+        </div>
+        <DarkLight/>
+      </TheamProvider>
     </BioProvider>
-    
   );
 }
 

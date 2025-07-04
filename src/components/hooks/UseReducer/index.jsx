@@ -8,7 +8,7 @@ export const ReducerComp = () => {
   };
 
   const reducer = (state, action) => {
-    console.log(state, action); 
+    console.log(state, action);
     // if (action.type === "INCREMENT") {
     //   return state + 1;
     // }
