@@ -2,7 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BioProvider } from "./components/hooks/ContexAPICustomeHook";
 // import { ReducerComp } from "./components/hooks/UseReducer";
-import { DarkLight, TheamProvider } from "./components/hooks/ContexAPICustomeHook/DarkLite";
+import { TheamProvider } from "./components/hooks/ContexAPICustomeHook/DarkLite";
+import { ReactMemo } from "./components/hooks/Memo/ReactMemo";
 // import { Home } from './components/hooks/ContexAPICustomeHook/Home';
 // import { About } from './components/hooks/ContexAPICustomeHook/About';
 // import { Pracform } from './components/PracticeForm';
@@ -56,8 +57,9 @@ function App() {
           {/* <Home/>
     <About/> */}
           {/* <ReducerComp /> */}
+        <ReactMemo/>
         </div>
-        <DarkLight/>
+        {/* <DarkLight/> */}
       </TheamProvider>
     </BioProvider>
   );

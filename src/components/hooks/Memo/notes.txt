@@ -1,0 +1,18 @@
+Memoization:
+
+useMemo uses memoization, a technique where the result of a function call is cached based on 
+its input. If the input (dependencies) remain the same, the cached result is
+returned instead of recomputing it. 
+
+
+Use Cases:
+
+Expensive Calculations:
+Optimizing calculations that take a significant amount of time or resources. 
+
+Referential Equality Checks:
+Avoiding unnecessary re-renders when comparing objects or arrays, which are checked by reference in 
+JavaScript. 
+
+Preventing Redundant API Calls:
+Memoizing API call results to avoid making the same request multiple times
