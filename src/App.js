@@ -4,6 +4,7 @@ import { BioProvider } from "./components/hooks/ContexAPICustomeHook";
 // import { ReducerComp } from "./components/hooks/UseReducer";
 import { TheamProvider } from "./components/hooks/ContexAPICustomeHook/DarkLite";
 import { ReactMemo } from "./components/hooks/Memo/ReactMemo";
+import MemoParentComponent from "./components/hooks/Memo/UseMemo";
 // import { Home } from './components/hooks/ContexAPICustomeHook/Home';
 // import { About } from './components/hooks/ContexAPICustomeHook/About';
 // import { Pracform } from './components/PracticeForm';
@@ -57,7 +58,8 @@ function App() {
           {/* <Home/>
     <About/> */}
           {/* <ReducerComp /> */}
-        <ReactMemo/>
+        {/* <ReactMemo/> */}
+        <MemoParentComponent/>
         </div>
         {/* <DarkLight/> */}
       </TheamProvider>

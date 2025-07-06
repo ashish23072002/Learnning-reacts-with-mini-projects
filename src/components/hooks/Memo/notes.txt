@@ -1,18 +1,23 @@
-Memoization:
+## Memoization:
 
 useMemo uses memoization, a technique where the result of a function call is cached based on 
 its input. If the input (dependencies) remain the same, the cached result is
 returned instead of recomputing it. 
 
 
-Use Cases:
+### Use Cases:
 
-Expensive Calculations:
-Optimizing calculations that take a significant amount of time or resources. 
+- Expensive Calculations:
+ Optimizing calculations that take a significant amount of time or resources. 
 
-Referential Equality Checks:
+- Referential Equality Checks:
 Avoiding unnecessary re-renders when comparing objects or arrays, which are checked by reference in 
 JavaScript. 
 
-Preventing Redundant API Calls:
+- Preventing Redundant API Calls:
 Memoizing API call results to avoid making the same request multiple times
+
+
+## The useMemo hook 
+
+- useMemo in React is utilized to optimize performance by memoizing (caching) the result of an expensive calculation. This prevents unnecessary re-computation of values on every render, especially when the inputs to the calculation have not changed.
