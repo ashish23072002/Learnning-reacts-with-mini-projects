@@ -44,8 +44,7 @@ export const UseCallback = () => {
       <h1>Simple Counter</h1>
       <p>Count: {count}</p>
       <Button onClick={incre}>Increment</Button>
-      <Button onClick={decre}>Decreement</Button>
-
+      <Button onClick={decre}>Decreement</Button>0
       <Counts />
     </div>
   );
