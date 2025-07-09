@@ -240,6 +240,14 @@ async function getData() {
 
  json-server --watch db.json --port 3001
 
+ ### how to check which user.email and user.name you are currently in Github 
+
+git config --global user.email
+git config --global user.name
+
+git config --global user.email yournew@email.com
+git config --global user.name yournewgoodname
+
 
 
 # Extensions i am currently using for Vs code
