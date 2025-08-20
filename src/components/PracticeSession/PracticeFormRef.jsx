@@ -27,7 +27,12 @@ export const PracticesessionII = () => {
     <>
       <form onSubmit={formSubmit}>
         <input type="text" name="user" placeholder="Enter user" ref={userRef} />
-        <input type="text" name="email" placeholder="Enter email" ref={emailRef} />
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter email"
+          ref={emailRef}
+        />
 
         <button type="submit">Submit</button>
       </form>

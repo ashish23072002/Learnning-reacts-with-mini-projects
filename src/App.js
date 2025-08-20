@@ -6,6 +6,7 @@ import { TheamProvider } from "./components/hooks/ContexAPICustomeHook/DarkLite"
 import { ReactMemo } from "./components/hooks/Memo/ReactMemo";
 import MemoParentComponent from "./components/hooks/Memo/UseMemo";
 import { UseCallback } from "./components/hooks/Memo/UseCallback";
+import { PracticesessionII } from "./components/PracticeSession/PracticeFormRef";
 // import { Home } from './components/hooks/ContexAPICustomeHook/Home';
 // import { About } from './components/hooks/ContexAPICustomeHook/About';
 // import { Pracform } from './components/PracticeForm';
@@ -62,6 +63,7 @@ function App() {
         {/* <ReactMemo/> */}
         {/* <MemoParentComponent/> */}
         <UseCallback/>
+        <PracticesessionII/>
         </div>
         {/* <DarkLight/> */}
       </TheamProvider>
